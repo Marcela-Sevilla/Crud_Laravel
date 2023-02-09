@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticuloController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,4 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::resource('articulos', 'app/Http/Controllers/ArticuloControllers');
+Route::get('/articulos', [ArticuloController::class, 'index']);
