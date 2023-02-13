@@ -18,4 +18,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/create', function () {
+    return view('create');
+})->name('crear');
+
 Route::get('/articulos', [ArticuloController::class, 'index']);
+
+Route::post('/articulos', [ArticuloController::class, 'store'])->name('register');

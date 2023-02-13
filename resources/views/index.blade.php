@@ -7,7 +7,7 @@
         <span class="fs-4 fw-semibold">Lista de Compras</span>
     </div>
     <div class="card-body p-4">
-        <a href="articulos/create" class="btn btn-outline-primary fs-5 shadow-sm">Agregar Artículo</a>
+        <a href="{{route('crear')}}" class="btn btn-outline-primary fs-5 shadow-sm">Agregar Artículo</a>
         
         <div class="table-responsive mt-3">
             <table class="table table-dark table-striped table-hover shadow-sm">
@@ -18,7 +18,7 @@
                 <th scope="col">Artículo</th>
                 <th scope="col">Cantidad</th>
                 <th scope="col">Precio</th>
-                <th scope="col">Acciones</th>
+                <th class="text-center" scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,9 +29,9 @@
                         <td>{{$articulo->descripcion}}</td>
                         <td>{{$articulo->contidad}}</td>
                         <td>{{$articulo->precio}}</td>
-                        <td>
-                            <a href="" class="btn btn-warning shadow-sm">Editar</a>
-                            <button class="btn btn-danger shadow-sm ms-2">Eliminar</button>
+                        <td class="text-center">
+                            <a href="" class="btn btn-warning shadow-sm fw-semibold">Editar</a>
+                            <button class="btn btn-danger shadow-sm ms-2 fw-semibold">Eliminar</button>
                         </td>
                     </tr>
                 @endforeach

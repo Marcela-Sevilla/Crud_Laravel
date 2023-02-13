@@ -26,7 +26,7 @@ class ArticuloController extends Controller
      */
     public function create()
     {
-        //
+        return view('/create');
     }
 
     /**
@@ -37,7 +37,15 @@ class ArticuloController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $articulo = new Articulo();
+        $articulo->codigo = $request->get('codigo');
+        $articulo->descripcion = $request->get('descripcion');
+        $articulo->contidad = $request->get('cantidad');
+        $articulo->precio = $request->get('precio');
+
+        $articulo->save();
+
+        return redirect('/articulos');
     }
 
     /**
