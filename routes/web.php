@@ -31,3 +31,5 @@ Route::get('/articulos', [ArticuloController::class, 'index']);
 Route::get('/edit/{id}', [ArticuloController::class, 'edit']);
 
 Route::post('/articulos', [ArticuloController::class, 'store'])->name('register');
+
+Route::put('/articulos/{id}', [ArticuloController::class, 'update']);

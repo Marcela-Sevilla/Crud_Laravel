@@ -8,7 +8,7 @@
     </div>
 
     <div class="card-body p-4">
-        <form method="POST" action="">
+        <form method="POST" action="/articulos/{{$articulo->id}}">
             @csrf
             @method('PUT')
             <div class="mb-3">

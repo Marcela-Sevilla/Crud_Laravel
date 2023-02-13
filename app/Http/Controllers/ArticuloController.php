@@ -80,7 +80,15 @@ class ArticuloController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $articulo = Articulo::find($id);
+        $articulo->codigo = $request->get('codigo');
+        $articulo->descripcion = $request->get('descripcion');
+        $articulo->contidad = $request->get('cantidad');
+        $articulo->precio = $request->get('precio');
+
+        $articulo->save();
+
+        return redirect('/articulos');
     }
 
     /**
