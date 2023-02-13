@@ -30,7 +30,7 @@
                         <td>{{$articulo->contidad}}</td>
                         <td>{{$articulo->precio}}</td>
                         <td class="text-center">
-                            <a href="" class="btn btn-warning shadow-sm fw-semibold">Editar</a>
+                            <a href="/edit/{{$articulo->id}}" class="btn btn-warning shadow-sm fw-semibold">Editar</a>
                             <button class="btn btn-danger shadow-sm ms-2 fw-semibold">Eliminar</button>
                         </td>
                     </tr>

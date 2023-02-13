@@ -22,6 +22,12 @@ Route::get('/create', function () {
     return view('create');
 })->name('crear');
 
+Route::get('/edit', function () {
+    return view('edit');
+})->name('editar');
+
 Route::get('/articulos', [ArticuloController::class, 'index']);
+
+Route::get('/edit/{id}', [ArticuloController::class, 'edit']);
 
 Route::post('/articulos', [ArticuloController::class, 'store'])->name('register');
