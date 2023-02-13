@@ -30,8 +30,12 @@
                         <td>{{$articulo->contidad}}</td>
                         <td>{{$articulo->precio}}</td>
                         <td class="text-center">
-                            <a href="/edit/{{$articulo->id}}" class="btn btn-warning shadow-sm fw-semibold">Editar</a>
-                            <button class="btn btn-danger shadow-sm ms-2 fw-semibold">Eliminar</button>
+                           <form action="/destroy/{{$articulo->id}}" method="POST">
+                               @csrf
+                               @method('DELETE')
+                                <a href="/edit/{{$articulo->id}}" class="btn btn-warning shadow-sm fw-semibold">Editar</a>
+                                <button class="btn btn-danger shadow-sm ms-2 fw-semibold">Eliminar</button>
+                           </form>
                         </td>
                     </tr>
                 @endforeach
