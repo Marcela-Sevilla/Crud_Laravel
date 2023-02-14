@@ -2,14 +2,13 @@
 
 @section('contenido')
 
-<section class="card shadow-sm">
-    <div class="card-header text-bg-primary">
-        <span class="fs-4 fw-semibold">Lista de Compras</span>
+<section class="card shadow-sm rounded-5">
+    <div class="card-header rounded-5 rounded-bottom-0">
+        <h3 class="mb-0 ms-3"><i class="bi bi-clipboard-data-fill"></i> Registro de Compras</h3>
     </div>
-    <div class="card-body p-4">
-        <a href="{{route('crear')}}" class="btn btn-outline-primary fs-5 shadow-sm">Agregar Artículo</a>
-        
-        <div class="table-responsive mt-3">
+    <div class="card-body p-4 p-lg-5">
+
+        <div class="table-responsive">
             <table class="table table-dark table-striped table-hover shadow-sm">
             <thead>
                 <tr>
@@ -33,8 +32,8 @@
                            <form action="/destroy/{{$articulo->id}}" method="POST">
                                @csrf
                                @method('DELETE')
-                                <a href="/edit/{{$articulo->id}}" class="btn btn-warning shadow-sm fw-semibold">Editar</a>
-                                <button class="btn btn-danger shadow-sm ms-2 fw-semibold">Eliminar</button>
+                                <a href="/edit/{{$articulo->id}}" class="btn btn-primary shadow-sm fw-semibold">Editar <i class="bi bi-pen-fill"></i></a>
+                                <button class="btn btn-danger shadow-sm ms-2 fw-semibold">Eliminar <i class="bi bi-trash3-fill"></i></button>
                            </form>
                         </td>
                     </tr>
@@ -42,6 +41,9 @@
             </tbody>
             </table>
         </div>
+
+        <a href="{{route('crear')}}" class="btn btn-outline-warning fs-5 shadow-sm border-2 mt-2 fw-semibold">Agregar Artículo <i class="bi bi-basket2-fill"></i></a>
+
     </div>
 </section>
 

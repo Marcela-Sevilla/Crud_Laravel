@@ -14,9 +14,7 @@ use App\Http\Controllers\ArticuloController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [ArticuloController::class, 'index']);
 
 Route::get('/create', function () {
     return view('create');
@@ -26,7 +24,6 @@ Route::get('/edit', function () {
     return view('edit');
 })->name('editar');
 
-Route::get('/articulos', [ArticuloController::class, 'index']);
 
 Route::get('/edit/{id}', [ArticuloController::class, 'edit']);
 

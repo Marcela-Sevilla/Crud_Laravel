@@ -45,7 +45,7 @@ class ArticuloController extends Controller
 
         $articulo->save();
 
-        return redirect('/articulos');
+        return redirect('/');
     }
 
     /**
@@ -88,7 +88,7 @@ class ArticuloController extends Controller
 
         $articulo->save();
 
-        return redirect('/articulos');
+        return redirect('/');
     }
 
     /**
@@ -101,6 +101,6 @@ class ArticuloController extends Controller
     {
         $articulo = Articulo::find($id); 
         $articulo->delete();
-        return redirect('/articulos');
+        return redirect('/');
     }
 }

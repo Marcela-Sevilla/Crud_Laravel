@@ -2,33 +2,33 @@
 
 @section('contenido')
 
-<section class="card shadow-sm">
-    <div class="card-header text-bg-primary">
-        <span class="fs-4 fw-semibold">Agregar Artículo a la Compra</span>
+<section class="card shadow-sm rounded-5">
+    <div class="card-header rounded-5 rounded-bottom-0">
+        <h3 class="mb-0 ms-3"><i class="bi bi-basket2-fill"></i> Agregar Registro de Compra</h3>
     </div>
 
     <div class="card-body p-4">
         <form method="POST" action="{{route('register')}}">
             @csrf
             <div class="mb-3">
-                <label for="codigo" class="form-label fs-5">Código:</label>
-                <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Ingrese el código del artículo" required>
+                <label for="codigo" class="form-label fs-5 fw-semibold">Código Prenda:</label>
+                <input type="text" class="form-control shadow-sm" id="codigo" name="codigo" placeholder="Ingrese el código de la prenda" required>
             </div>
             <div class="mb-3">
-                <label for="descripcion" class="form-label fs-5">Descripción Artículo:</label>
-                <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Ingrese la descripción del artículo" required>
+                <label for="descripcion" class="form-label fs-5 fw-semibold">Descripción Prenda:</label>
+                <input type="text" class="form-control shadow-sm" id="descripcion" name="descripcion" placeholder="Ingrese la descripción de la prenda" required>
             </div>
             <div class="mb-3">
-                <label for="cantidad" class="form-label fs-5">Cantidad:</label>
-                <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad" required>
+                <label for="cantidad" class="form-label fs-5 fw-semibold">Cantidad de Prendas:</label>
+                <input type="number" class="form-control shadow-sm" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad de prendas" required>
             </div>
             <div class="mb-3">
-                <label for="precio" class="form-label">Precio:</label>
-                <input type="number" class="form-control" id="precio" name="precio" placeholder="Ingrese el precio del artículo" required>
+                <label for="precio" class="form-label fs-5 fw-semibold">Precio de la Prenda:</label>
+                <input type="number" class="form-control shadow-sm" id="precio" name="precio" placeholder="Ingrese el precio de la prenda" required>
             </div>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <a href="/articulos" class="btn btn-secondary me-md-2" type="button">Cancelar</a>
-                <button class="btn btn-primary" type="submit">Enviar</button>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center pt-2">
+                <a href="/" class="btn btn-outline-secondary fw-semibold border-2 me-md-2 shadow-sm" type="button"><i class="bi bi-box-arrow-left"></i> Cancelar</a>
+                <button class="btn btn-primary fw-semibold shadow-sm" type="submit">Registrar Prenda <i class="bi bi-send"></i></button>
             </div>
         </form>
     </div>

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root{
+  --primario:#5D50C6;
+  --secundario:#F85E9F;
+  --rosaPastel:#FFE6E6;
+  --terceario: #FACD49;
+}
+
+/*=== CUSTOM FONTS ===*/
+@font-face {
+  font-family: 'Josefin';
+  src: url(../fonts/Josefin_Sans/JosefinSans-Regular.ttf);
+}
+
+
+.navbar{
+    background-color: var(--primario);
+}
+.navbar-brand{
+    color: #FFFFFF !important;
+}
+
+.card-header{
+    background-color: var(--secundario);
+    color: #FFFFFF;
+}
+
+.form-label{
+  color: var(--primario) !important;
+}
+
+footer{
+  background-color: var(--rosaPastel);
+}
