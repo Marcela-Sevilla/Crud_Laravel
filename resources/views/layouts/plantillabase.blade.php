@@ -30,7 +30,7 @@
     <header id="header" class="header fixed-top pt-1">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="/" class="logo d-flex align-items-center">
                 <img src="{{ asset('img/icon.png') }}" alt="Logo">
                 <span class="d-none d-lg-block">Butterfly Clothing</span>
             </a>
@@ -57,7 +57,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="index.html">
+                <a class="nav-link " href="/">
                     <i class="bi bi-clipboard-data-fill"></i>
                     <span>Registro de Compras</span>
                 </a>
@@ -69,13 +69,6 @@
                     <span>Agregar Artículo</span>
                 </a>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-contact.html">
-                    <i class="bi bi-envelope"></i>
-                    <span>Contact</span>
-                </a>
-            </li><!-- End Contact Page Nav -->
 
         </ul>
 
