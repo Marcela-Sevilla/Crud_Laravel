@@ -22,7 +22,7 @@
             <div class="mb-3">
                 <label for="descripcion" class="form-label fs-5 fw-semibold">Descripción Prenda:</label>
                 <input type="text" class="form-control shadow-sm" id="descripcion" name="descripcion" placeholder="Ingrese la descripción de la prenda">
-                @error('codigo')
+                @error('descripcion')
                 <p class="fw-semibold text-warning mt-2">
                     {{'El campo de Descripción es requerido!'}}
                 </p>
@@ -31,7 +31,7 @@
             <div class="mb-3">
                 <label for="cantidad" class="form-label fs-5 fw-semibold">Cantidad de Prendas:</label>
                 <input type="number" class="form-control shadow-sm" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad de prendas">
-                @error('codigo')
+                @error('precio')
                 <p class="fw-semibold text-warning mt-2">
                     {{'El campo de Cantidad es requerido y solo acepta números!'}}
                 </p>

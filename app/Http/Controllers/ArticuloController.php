@@ -40,8 +40,8 @@ class ArticuloController extends Controller
         $request->validate([
             'codigo'=> 'required|min:5',
             'descripcion'=> 'required',
-            'cantidad'=> 'required|number',
-            'precio'=> 'required|number',
+            'cantidad'=> 'required',
+            'precio'=> 'required',
         ]);
 
         $articulo = new Articulo();
@@ -87,6 +87,13 @@ class ArticuloController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'codigo'=> 'required|min:5',
+            'descripcion'=> 'required',
+            'cantidad'=> 'required',
+            'precio'=> 'required',
+        ]);
+
         $articulo = Articulo::find($id);
         $articulo->codigo = $request->get('codigo');
         $articulo->descripcion = $request->get('descripcion');
