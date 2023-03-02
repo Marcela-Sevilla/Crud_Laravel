@@ -95,6 +95,7 @@
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('vendor/simple-datatables/simple-datatables.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
 </body>
 
 </html>
