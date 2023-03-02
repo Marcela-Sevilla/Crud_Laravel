@@ -32,7 +32,8 @@
                                         <th scope="col">Código</th>
                                         <th scope="col">Artículo</th>
                                         <th scope="col">Cantidad</th>
-                                        <th scope="col">Precio</th>
+                                        <th scope="col">Precio Unidad</th>
+                                        <th scope="col">Precio Total</th>
                                         <th class="text-center" scope="col">Acciones</th>
                                     </tr>
                                 </thead>
@@ -43,9 +44,14 @@
                                         <td>{{$articulo->descripcion}}</td>
                                         <td>{{$articulo->contidad}}</td>
                                         <td>${{$articulo->precio}}</td>
+                                        <td>${{$articulo->precio * $articulo->contidad}}</td>
                                         <td class="text-center">
-                                            <a href="/edit/{{$articulo->id}}" class="btn btn-sm btn-primary shadow-sm fw-semibold">Editar <i class="bi bi-pen-fill"></i></a>
-                                            <button class="btn btn-sm btn-danger shadow-sm ms-2 fw-semibold" data-bs-toggle="modal" data-bs-target="#confirmarEliminar">Eliminar <i class="bi bi-trash3-fill"></i></button>
+                                            <form action="/destroy/{{$articulo->id}}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <a href="/edit/{{$articulo->id}}" class="btn btn-sm btn-primary shadow-sm fw-semibold">Editar <i class="bi bi-pen-fill"></i></a>
+                                                <button class="btn btn-sm btn-danger shadow-sm ms-2 fw-semibold">Eliminar <i class="bi bi-trash3-fill"></i></button>
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach
