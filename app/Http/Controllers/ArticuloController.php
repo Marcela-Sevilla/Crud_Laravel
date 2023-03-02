@@ -37,9 +37,11 @@ class ArticuloController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'codigo' => 'required|numeric',
-            'descripcion' => 'required',
+        $request->validate([
+            'codigo'=> 'required|min:5',
+            'descripcion'=> 'required',
+            'cantidad'=> 'required|number',
+            'precio'=> 'required|number',
         ]);
 
         $articulo = new Articulo();
