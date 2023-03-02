@@ -46,7 +46,6 @@
                                         <td class="text-center">
                                             <a href="/edit/{{$articulo->id}}" class="btn btn-sm btn-primary shadow-sm fw-semibold">Editar <i class="bi bi-pen-fill"></i></a>
                                             <button class="btn btn-sm btn-danger shadow-sm ms-2 fw-semibold" data-bs-toggle="modal" data-bs-target="#confirmarEliminar">Eliminar <i class="bi bi-trash3-fill"></i></button>
-
                                         </td>
                                     </tr>
                                     @endforeach
@@ -62,24 +61,5 @@
 
         </div>
 </section>
-
-<!-- Modal -->
-<div class="modal fade" id="confirmarEliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 @endsection
