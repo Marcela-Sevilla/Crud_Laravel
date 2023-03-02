@@ -16,7 +16,7 @@
     <div class="row justify-content-center">
 
         <!-- Left side columns -->
-        <div class="col-lg-9">
+        <div class="col-lg-10">
             <div class="row">
 
                 <!-- Recent Sales -->
